@@ -21,6 +21,7 @@
   --button-BackgroundColor: #2196f3;
   --button-BackgroundColor-hover: #2f303a;
   --filter-button-BackgroundColor: #f5f4fa;
+  --future-BackgroundColor-beforeElenent: #f5f4fa;
   --GalleryItemColor: #212121;
 }
 body {
@@ -210,6 +211,31 @@ p {
 }
 .features-list-item:last-child {
   margin-right: 0;
+}
+.features-list-item::before {
+  content: "";
+  height: 120px;
+  margin-bottom: 30px;
+  display: block;
+  background-color: var(--future-BackgroundColor-beforeElenent);
+  background-position: center;
+  background-size: 70px 70px;
+  background-repeat: no-repeat;
+}
+.features-list-item:hover:before {
+  background-color: var(--AccentColor);
+}
+.features-list-item:nth-child(1):before {
+  background-image: url("../images/features/antenna.svg");
+}
+.features-list-item:nth-child(2):before {
+  background-image: url("../images/features/clock.svg");
+}
+.features-list-item:nth-child(3):before {
+  background-image: url("../images/features/diagram.svg");
+}
+.features-list-item:nth-child(4):before {
+  background-image: url("../images/features/astronaut.svg");
 }
 .features-list-item-header {
   margin-bottom: 10px;
