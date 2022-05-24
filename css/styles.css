@@ -21,7 +21,7 @@
   --button-BackgroundColor: #2196f3;
   --button-BackgroundColor-hover: #2f303a;
   --filter-button-BackgroundColor: #f5f4fa;
-  --future-BackgroundColor-beforeElenent: #f5f4fa;
+  --team-IconColor: #afb1b8;
   --GalleryItemColor: #212121;
 }
 body {
@@ -98,6 +98,16 @@ p {
   max-width: 100%;
   height: auto;
 }
+.icons {
+  width: 20px;
+  height: 20px;
+  fill: var(--team-IconColor);
+  /*border-radius: 22px;*/
+}
+.icons:hover {
+  fill:var(--AccentColor);
+  /*color: aqua;*/
+}
 .logo {
   display: block;
   font-family: var(--SecondFont);
@@ -128,7 +138,8 @@ p {
 }
 /*#endregion*/
 
-/*#region Header section*/
+/*#region index*/
+/*#region header section*/
 .header {
   border-bottom: 1px solid var(--HeaderBorderColor);
 }
@@ -184,6 +195,10 @@ p {
   text-align: center;
   color: var(--FirstMainColor);
   background-color: var(--MainBackgroundColor);
+  background-image: linear-gradient(to right,rgba(47, 48, 58, 0.4),rgba(47, 48, 58, 0.4)), url("../images/hero/img.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 .hero__main-text {
   width: 696px;
@@ -315,7 +330,6 @@ p {
   text-align: center;
 }
 .team-list-item-descriptor {
-  /*margin-bottom: 30px;*/
   padding: 0;
   font-weight: 400;
   font-size: 16px;
@@ -323,6 +337,11 @@ p {
   text-align: center;
   color: var(--DescriptionColor);
 }
+.team-list-item-iconlist {
+  list-style: none;
+  display: flex;
+}
+
 /*#endregion*/
 
 /*#region footer */
@@ -345,16 +364,27 @@ p {
   color: rgba(255, 255, 255, 0.6);
 }
 /*#endregion*/
-
+/*#endregion index*/
 /*#region Portfolio */
 
 /*#region gallery */
 .filter {
-  padding-bottom: 34px;
+  display: flex;
+  width: 611px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 50px;
   text-align: center;
 }
-.filter-buttons {
+.filter-button {
+  padding: 6px 22px;
   background-color: var(--filter-button-BackgroundColor);
+}
+.filter-item {
+  margin-right: 8px;
+}
+.filter-item:last-child {
+  margin-right: 0;
 }
 .gallery {
 }
@@ -363,7 +393,6 @@ p {
   text-align: left;
   margin-top: 30px;
   margin-right: 30px;
-  border: 1px solid var(--BorderElement);
   background-color: var(--SecondBackgroundColor);
 }
 .gallery-item:nth-child(3n) {
@@ -379,6 +408,9 @@ p {
   color: var(--GalleryItemColor);
 }
 .gallery-item-text {
+  border-left: 1px solid var(--BorderElement);
+  border-right: 1px solid var(--BorderElement);
+  border-bottom: 1px solid var(--BorderElement);
   padding: 20px 24px;
 }
 .gallery-item-description {
