@@ -108,6 +108,9 @@ p {
   fill:var(--AccentColor);
   /*color: aqua;*/
 }
+.iconlist-item {
+  text-align: center;
+}
 .logo {
   display: block;
   font-family: var(--SecondFont);
@@ -338,10 +341,35 @@ p {
   color: var(--DescriptionColor);
 }
 .team-list-item-iconlist {
-  list-style: none;
+  /*list-style: none;*/
   display: flex;
+  margin-top: 16px;
+  justify-items: center;
+  align-items: center;
 }
-
+.team-list-item-iconlist-item {
+  outline: 1px solid #2196f3;
+  width: 44px;
+  height: 44px;
+  margin-right: 10px;
+  text-align: center;
+  vertical-align: auto;
+}
+.team-list-item-iconlist-item:last-child {
+  margin-right: 0;
+}
+.team-list-item-iconlist-item1 {
+  outline: 1px solid red;
+  /*width: 44px;
+  height: 44px;*/
+  margin-right: 10px;
+  padding: 12px;
+  /*text-align: center;
+  vertical-align: auto;*/
+}
+.team-list-item-iconlist-item1:last-child {
+  margin-right: 0;
+}
 /*#endregion*/
 
 /*#region footer */
