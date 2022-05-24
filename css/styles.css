@@ -24,6 +24,7 @@
   --team-IconColor: #afb1b8;
   --GalleryItemColor: #212121;
   --future-BackgroundColor-beforeElenent: #f5f4fa;
+  --clients-logoColor: #afb1b8;
 }
 body {
   font-family: var(--FirstFont);
@@ -71,9 +72,16 @@ p {
 .social-link {
   width: 44px;
   height: 44px;
+  border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.social-link:hover .icons {
+  fill: var(--FirstMainColor);
+}
+.social-link:hover {
+  background-color: var(--AccentColor);
 }
 .button {
   border: 0;
@@ -360,6 +368,43 @@ p {
 }
 /*#endregion*/
 
+/*#region clients*/
+.clients-header {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 42px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  margin-bottom: 50px;
+}
+.clients-logo {
+  width: 106px;
+  height: 60px;
+  fill: var(--clients-logoColor);
+}
+.clients-logo-list {
+  display: flex;
+}
+.clients-logo-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 170px;
+  height: 92px;
+  border: 1px solid var(--clients-logoColor);
+  border-radius: 4px;
+  margin-right: 30px;
+}
+.clients-logo-item:last-child {
+  margin-right: 0;
+}
+.clients-logo-item:hover {
+  border: 1px solid var(--AccentColor);
+}
+.clients-logo-item:hover .clients-logo {
+  fill: var(--AccentColor);
+}
+/*#endregion clients*/
 /*#region footer */
 .footer {
   padding: 60px 0px;
