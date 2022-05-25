@@ -133,7 +133,7 @@ h1, h2, h3, h4, h5, h6, li, p {
   margin: 0;
   padding-top: 94px;
   padding-bottom: 94px;
-  }
+}
 .container {
   width: 1200px;
   margin-left: auto;
@@ -210,11 +210,16 @@ h1, h2, h3, h4, h5, h6, li, p {
 
 /*#region hero section */
 .hero {
+  background-color: var(--MainBackgroundColor);
+  color: var(--FirstMainColor); 
+}
+.hero-background-container {
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
   padding-top: 200px;
   padding-bottom: 200px;
   text-align: center;
-  color: var(--FirstMainColor);
-  background-color: var(--MainBackgroundColor);
   background-image: linear-gradient(to right,rgba(47, 48, 58, 0.4),rgba(47, 48, 58, 0.4)), url("../images/hero/img.jpg");
   background-repeat: no-repeat;
   background-position: center;
