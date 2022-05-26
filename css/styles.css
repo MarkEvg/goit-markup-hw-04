@@ -70,18 +70,20 @@ h1, h2, h3, h4, h5, h6, li, p {
   justify-content: center;
   align-items: center;
 }
-.social-link:hover .icons {
+.social-link:hover .icons,
+.social-link:focus .icons {
   fill: var(--FirstMainColor);
 }
-.social-link:hover {
+.social-link:hover,
+.social-link:focus {
   background-color: var(--AccentColor);
 }
-.social-link:focus .icons {
+/*.social-link:focus .icons {
   fill: var(--FirstMainColor);
 }
 .social-link:focus {
   background-color: var(--AccentColor);
-}
+}*/
 .button {
   border: 0;
   border-radius: 4px;
@@ -431,12 +433,12 @@ h1, h2, h3, h4, h5, h6, li, p {
   display: flex;
 }
 .footer {
-  /*padding: 60px 0px;*/
+  padding: 60px 0px;
   color: var(--FirstMainColor);
   background-color: var(--MainBackgroundColor);
 }
 .footer-address {
-  margin: 60px 0px;
+  margin: 0;
   margin-right: 70px;
 }
 .footer-logo-text {
@@ -453,8 +455,7 @@ h1, h2, h3, h4, h5, h6, li, p {
   color: rgba(255, 255, 255, 0.6);
 }
 .footer-sociallink-block {
-  margin-top: 72px;
-  margin-bottom: 100px;
+  padding-top: 12px;
 }
 .footer-sociallink-block-header {
   margin-bottom: 20px;
