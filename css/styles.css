@@ -76,6 +76,12 @@ h1, h2, h3, h4, h5, h6, li, p {
 .social-link:hover {
   background-color: var(--AccentColor);
 }
+.social-link:focus .icons {
+  fill: var(--FirstMainColor);
+}
+.social-link:focus {
+  background-color: var(--AccentColor);
+}
 .button {
   border: 0;
   border-radius: 4px;
@@ -112,7 +118,7 @@ h1, h2, h3, h4, h5, h6, li, p {
   height: 20px;
   fill: var(--team-IconColor);
 }
-.icons:hover {
+.icons:hover, .icons:focus {
   fill:var(--AccentColor);
 }
 .iconlist-item {
@@ -203,7 +209,8 @@ h1, h2, h3, h4, h5, h6, li, p {
 .header-contact-item:last-child {
   margin-right: 0;
 }
-.header-contact-item-text:hover .header-contacts-icon {
+.header-contact-item-text:hover .header-contacts-icon,
+.header-contact-item-text:focus .header-contacts-icon {
   fill: var(--AccentColor);
 }
 /*#endregion*/
@@ -472,10 +479,12 @@ h1, h2, h3, h4, h5, h6, li, p {
   border-radius: 50%;
   background-color: #43444d;
 }
-.footer-sociallink:hover {
+.footer-sociallink:hover,
+.footer-sociallink:focus {
   background-color: var(--AccentColor);
 }
-.footer-sociallink:hover .footer-icons {
+.footer-sociallink:hover .footer-icons,
+.footer-sociallink:focus .footer-icons {
   fill: var(--FirstMainColor);
 }
 .footer-icons {
