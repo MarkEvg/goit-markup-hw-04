@@ -175,22 +175,21 @@ h1, h2, h3, h4, h5, h6, li, p {
   /*align-items: center;*/
 }
 .header-contacts-icon {
-  width: 16px;
-  height: 16px;
   margin-right: 10px;
-  /*fill: red;*/
+  fill: var(--ContactColor);
 }
 .header-nav-list, .header-contacts {
   display: flex;
 }
 .header-nav-item-text,
 .header-contact-item-text {
-  display: inline-block;
+  display: inline-flex;
   padding-top: 32px;
   padding-bottom: 32px;
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
+  align-items: center;
 }
 .header_logo {
   padding-top: 24px;
