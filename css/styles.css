@@ -16,6 +16,7 @@
   --MainBackgroundColor: #2f303a;
   --SecondBackgroundColor: #ffffff;
   --ContactColor: #757575;
+  --NavTextColor: #212121;
   --TeamBackgroundColor: #f5f4fa;
   --footer-logo-TextColor: #ffffff;
   --button-BackgroundColor: #2196f3;
@@ -33,6 +34,9 @@ body {
   background-color: var(--SecondBackgroundColor);
 }
 /*#region Global */
+*:focus {
+  outline: transparent;
+}
 h1, h2, h3, h4, h5, h6, li, p {
   margin: 0;
 }
@@ -147,6 +151,14 @@ h1, h2, h3, h4, h5, h6, li, p {
 }
 /*#endregion Global*/
 
+/*#region Specific */
+.header .link:focus,
+.footer .link:focus {
+  text-decoration: underline;
+}
+/*#endregion Specific */
+
+
 /*#region index*/
 
 /*#region header section*/
@@ -160,26 +172,29 @@ h1, h2, h3, h4, h5, h6, li, p {
   margin-right: auto;
   padding-left: 15px;
   padding-right: 15px;
-  align-items: center;
+  /*align-items: center;*/
 }
 .header-contacts-icon {
   width: 16px;
-  height: 12px;
+  height: 16px;
   margin-right: 10px;
+  /*fill: red;*/
 }
 .header-nav-list, .header-contacts {
   display: flex;
-  padding-top: 32px;
-  padding-bottom: 32px;
-  color: var(--ContactColor);
 }
 .header-nav-item-text,
 .header-contact-item-text {
+  display: inline-block;
   padding-top: 32px;
   padding-bottom: 32px;
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
+}
+.header_logo {
+  padding-top: 24px;
+  padding-bottom: 25px;
 }
 .header-logo-text {
   color: var(--header-logo-TextColor);
@@ -189,6 +204,7 @@ h1, h2, h3, h4, h5, h6, li, p {
 }
 .header-nav-item {
   margin-right: 50px;
+  color: var(--NavTextColor);
 }
 .header-nav-item:last-child {
   margin-right: 0;
@@ -198,6 +214,7 @@ h1, h2, h3, h4, h5, h6, li, p {
 }
 .header-contact-item {
   margin-right: 50px;
+  color: var(--ContactColor);
 }
 .header-contact-item:last-child {
   margin-right: 0;
@@ -356,6 +373,7 @@ h1, h2, h3, h4, h5, h6, li, p {
   text-align: center;
 }
 .team-list-item-descriptor {
+  margin-bottom: 16px;
   padding: 0;
   font-weight: 400;
   font-size: 16px;
@@ -365,7 +383,6 @@ h1, h2, h3, h4, h5, h6, li, p {
 }
 .team-list-item-iconlist {
   display: flex;
-  margin-top: 16px;
   justify-items: center;
   align-items: center;
 }
@@ -403,6 +420,7 @@ h1, h2, h3, h4, h5, h6, li, p {
   align-items: center;
   width: 170px;
   height: 92px;
+  outline: transparent;
   border: 1px solid var(--clients-logoColor);
   border-radius: 4px;
 }
@@ -424,6 +442,7 @@ h1, h2, h3, h4, h5, h6, li, p {
 /*#region footer */
 .footer .container {
   display: flex;
+  align-items: baseline;
 }
 .footer {
   padding: 60px 0px;
@@ -440,7 +459,7 @@ h1, h2, h3, h4, h5, h6, li, p {
 .footer-text {
   color: var(--FirstMainColor);
 }
-.footer-contacts-list {
+.address_block {
   margin-top: 20px;
 }
 .footer-contact {
@@ -448,9 +467,9 @@ h1, h2, h3, h4, h5, h6, li, p {
   color: rgba(255, 255, 255, 0.6);
 }
 .footer-sociallink-block {
-  padding-top: 12px;
 }
 .footer-sociallink-block-header {
+  display: inline-block;
   margin-bottom: 20px;
   font-weight: 700;
   font-size: 14px;
@@ -531,7 +550,11 @@ h1, h2, h3, h4, h5, h6, li, p {
 .gallery-item_place:nth-child(-n+3) {
   margin-top: 0;
 }
-.gallery-item_place:hover {
+.gallery-item {
+  display: block;
+}
+.gallery-item:hover,
+.gallery-item:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 .gallery-item-text {
